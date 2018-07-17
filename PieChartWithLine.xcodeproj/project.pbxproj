@@ -15,6 +15,9 @@
 		2CAB291120FDC0BC009BCE79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB291020FDC0BC009BCE79 /* main.m */; };
 		2CAB291B20FDC0BC009BCE79 /* PieChartWithLineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB291A20FDC0BC009BCE79 /* PieChartWithLineTests.m */; };
 		2CAB292620FDC0BC009BCE79 /* PieChartWithLineUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB292520FDC0BC009BCE79 /* PieChartWithLineUITests.m */; };
+		2CAB293A20FDC1A7009BCE79 /* FoodPieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB293620FDC1A6009BCE79 /* FoodPieModel.m */; };
+		2CAB293B20FDC1A7009BCE79 /* PieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB293720FDC1A6009BCE79 /* PieChart.m */; };
+		2CAB293C20FDC1A7009BCE79 /* PieCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB293820FDC1A7009BCE79 /* PieCenterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		2CAB292120FDC0BC009BCE79 /* PieChartWithLineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PieChartWithLineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAB292520FDC0BC009BCE79 /* PieChartWithLineUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieChartWithLineUITests.m; sourceTree = "<group>"; };
 		2CAB292720FDC0BC009BCE79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CAB293420FDC1A6009BCE79 /* FoodPieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPieModel.h; sourceTree = "<group>"; };
+		2CAB293520FDC1A6009BCE79 /* PieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChart.h; sourceTree = "<group>"; };
+		2CAB293620FDC1A6009BCE79 /* FoodPieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodPieModel.m; sourceTree = "<group>"; };
+		2CAB293720FDC1A6009BCE79 /* PieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChart.m; sourceTree = "<group>"; };
+		2CAB293820FDC1A7009BCE79 /* PieCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieCenterView.m; sourceTree = "<group>"; };
+		2CAB293920FDC1A7009BCE79 /* PieCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieCenterView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,7 @@
 		2CAB290020FDC0B9009BCE79 /* PieChartWithLine */ = {
 			isa = PBXGroup;
 			children = (
+				2CAB293320FDC18D009BCE79 /* PieChartView */,
 				2CAB290120FDC0B9009BCE79 /* AppDelegate.h */,
 				2CAB290220FDC0BA009BCE79 /* AppDelegate.m */,
 				2CAB290420FDC0BA009BCE79 /* ViewController.h */,
@@ -130,6 +140,19 @@
 				2CAB292720FDC0BC009BCE79 /* Info.plist */,
 			);
 			path = PieChartWithLineUITests;
+			sourceTree = "<group>";
+		};
+		2CAB293320FDC18D009BCE79 /* PieChartView */ = {
+			isa = PBXGroup;
+			children = (
+				2CAB293420FDC1A6009BCE79 /* FoodPieModel.h */,
+				2CAB293620FDC1A6009BCE79 /* FoodPieModel.m */,
+				2CAB293920FDC1A7009BCE79 /* PieCenterView.h */,
+				2CAB293820FDC1A7009BCE79 /* PieCenterView.m */,
+				2CAB293520FDC1A6009BCE79 /* PieChart.h */,
+				2CAB293720FDC1A6009BCE79 /* PieChart.m */,
+			);
+			path = PieChartView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAB293A20FDC1A7009BCE79 /* FoodPieModel.m in Sources */,
 				2CAB290620FDC0BA009BCE79 /* ViewController.m in Sources */,
+				2CAB293C20FDC1A7009BCE79 /* PieCenterView.m in Sources */,
+				2CAB293B20FDC1A7009BCE79 /* PieChart.m in Sources */,
 				2CAB291120FDC0BC009BCE79 /* main.m in Sources */,
 				2CAB290320FDC0BA009BCE79 /* AppDelegate.m in Sources */,
 			);
@@ -434,7 +460,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RADML45TTY;
 				INFOPLIST_FILE = PieChartWithLine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +478,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RADML45TTY;
 				INFOPLIST_FILE = PieChartWithLine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
